@@ -1,0 +1,28 @@
+{
+  "protocol": "SIRP-1000:2026-DRAFT",
+  "implementation": "DIKWP Semantic Immunity & Relational Repair OS",
+  "version": "1.0.0",
+  "third_party_certification": false,
+  "requirements": [
+    {"id":"SIRP-001","status":"implemented","requirement":"Negative affect alone cannot trigger restriction."},
+    {"id":"SIRP-002","status":"implemented","requirement":"No person-level moral or cognitive-worth score."},
+    {"id":"SIRP-003","status":"implemented","requirement":"Evidence gap and context truncation are separate dimensions."},
+    {"id":"SIRP-004","status":"implemented","requirement":"Protected criticism, whistleblowing and distress roles."},
+    {"id":"SIRP-005","status":"implemented","requirement":"Plural-world hypotheses are retained."},
+    {"id":"SIRP-006","status":"implemented","requirement":"Deliberate deception requires verified fabrication evidence."},
+    {"id":"SIRP-007","status":"implemented","requirement":"Context repair card includes omitted conditions and counter-readings."},
+    {"id":"SIRP-008","status":"implemented","requirement":"Family repair includes affected dependents and shared responsibility."},
+    {"id":"SIRP-009","status":"implemented","requirement":"Addictive design is evaluated separately from content truth."},
+    {"id":"SIRP-010","status":"implemented","requirement":"High-impact uncertainty routes to human review."},
+    {"id":"SIRP-011","status":"implemented","requirement":"Adverse platform interventions remain proposal-only."},
+    {"id":"SIRP-012","status":"implemented","requirement":"Appeal is required for adverse interventions."},
+    {"id":"SIRP-013","status":"implemented","requirement":"Responsibility ledger detects silent modification."},
+    {"id":"SIRP-014","status":"implemented","requirement":"Offline browser application makes no external request."},
+    {"id":"SIRP-015","status":"implemented","requirement":"Browser extension requests no host permissions."},
+    {"id":"SIRP-016","status":"partial","requirement":"Production C2PA validation and signing."},
+    {"id":"SIRP-017","status":"partial","requirement":"Independent multilingual calibration datasets."},
+    {"id":"SIRP-018","status":"partial","requirement":"Jurisdiction-specific lawful removal connectors."},
+    {"id":"SIRP-019","status":"partial","requirement":"Independent appeal and remedy institution integration."},
+    {"id":"SIRP-020","status":"partial","requirement":"Longitudinal real-world effectiveness evaluation."}
+  ]
+}

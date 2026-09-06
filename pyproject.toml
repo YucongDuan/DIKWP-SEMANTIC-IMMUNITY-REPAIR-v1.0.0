@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dikwp-semantic-immunity-repair"
+version = "1.0.0"
+description = "Transparent, plural-world semantic harm analysis and context repair"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "DIKWP Research Reference Implementation"}]
+dependencies = []
+
+[project.scripts]
+sirr = "dikwp_sirr.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

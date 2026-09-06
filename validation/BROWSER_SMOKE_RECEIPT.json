@@ -1,0 +1,10 @@
+{
+  "decision_label": "暂停变现或付费放大，等待复核",
+  "decision_code_text": "决策代码：PAUSE_MONETIZATION_PENDING_REVIEW。结果评价具体语义行为，不评价人的品格。",
+  "world_count": 6,
+  "signal_count": 10,
+  "relationship_repair_ok": true,
+  "design_audit_ok": true,
+  "console_or_page_errors": [],
+  "external_requests": []
+}

@@ -1,0 +1,92 @@
+{
+  "system": "DIKWP Semantic Immunity & Relational Repair OS",
+  "version": "1.0.0",
+  "generated_at": "2026-09-06T00:31:12.964221+00:00",
+  "status": "RESEARCH_ALPHA_REFERENCE_IMPLEMENTATION",
+  "tests": {
+    "pytest_passed": 15,
+    "pytest_failed": 0,
+    "test_files": 5
+  },
+  "source": {
+    "python_modules": 12,
+    "python_lines": 888,
+    "repository_files_before_git": 59
+  },
+  "browser_smoke": {
+    "decision_label": "暂停变现或付费放大，等待复核",
+    "decision_code_text": "决策代码：PAUSE_MONETIZATION_PENDING_REVIEW。结果评价具体语义行为，不评价人的品格。",
+    "world_count": 6,
+    "signal_count": 10,
+    "relationship_repair_ok": true,
+    "design_audit_ok": true,
+    "console_or_page_errors": [],
+    "external_requests": []
+  },
+  "static_audit": {
+    "files_scanned": 14,
+    "findings": []
+  },
+  "bounded_model_check": {
+    "model": "SIRP-1000 bounded reference workflow",
+    "states_checked": 360,
+    "violations": [],
+    "violation_count": 0,
+    "scope": "Finite combinatorial check of protected-expression, appeal, deception and removal invariants."
+  },
+  "distribution_consistency": {
+    "source_demo": {
+      "cases": 2,
+      "output": "/tmp/sirr_source_demo",
+      "decisions": [
+        "PAUSE_MONETIZATION_PENDING_REVIEW",
+        "PROTECT_NEGATIVE_TRUTH_OR_DISTRESS"
+      ]
+    },
+    "pyz_demo": {
+      "cases": 2,
+      "output": "/tmp/sirr_pyz_demo",
+      "decisions": [
+        "PAUSE_MONETIZATION_PENDING_REVIEW",
+        "PROTECT_NEGATIVE_TRUTH_OR_DISTRESS"
+      ]
+    },
+    "wheel_demo": {
+      "cases": 2,
+      "output": "/tmp/sirr_wheel_demo",
+      "decisions": [
+        "PAUSE_MONETIZATION_PENDING_REVIEW",
+        "PROTECT_NEGATIVE_TRUTH_OR_DISTRESS"
+      ]
+    },
+    "normalized_demo_sha256": "214c0c944e0eb34f306494ca28bdbecde867cd2793088abf4aafd9ae7cd7d98b",
+    "match": true
+  },
+  "browser_extension": {
+    "manifest_version": 3,
+    "permissions": [
+      "contextMenus"
+    ],
+    "host_permissions": [],
+    "network_client": false,
+    "javascript_syntax_check": true
+  },
+  "core_invariants": {
+    "negative_affect_alone_never_restricts": true,
+    "protected_expression_default": true,
+    "deliberate_deception_requires_independent_evidence": true,
+    "person_level_moral_score": false,
+    "secret_blacklist": false,
+    "automatic_external_removal_authority": 0,
+    "automatic_monetization_penalty_authority": 0,
+    "high_impact_adverse_action_requires_human_process": true,
+    "appeal_required": true
+  },
+  "limitations": [
+    "The engine is not an independent fact checker.",
+    "Heuristic pattern detection cannot infer malicious intent.",
+    "Finite-state checks do not prove arbitrary production deployments.",
+    "No jurisdiction-specific removal, payment, employment, medical or legal connector is included.",
+    "Real-world effectiveness and multilingual fairness require independent evaluation."
+  ]
+}

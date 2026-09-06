@@ -1,0 +1,43 @@
+{
+  "system": "DIKWP Semantic Immunity & Relational Repair OS",
+  "version": "1.0.0",
+  "git_commit": "2620ab5006c7683f71b407c90540e25019ffcdec",
+  "git_tag": "v1.0.0",
+  "generated_at": "2026-09-06T00:32:02.381697+00:00",
+  "distributions": {
+    "source_tree": {
+      "tests": "15 passed",
+      "demo_sha256": "214c0c944e0eb34f306494ca28bdbecde867cd2793088abf4aafd9ae7cd7d98b"
+    },
+    "standalone_pyz": {
+      "smoke": "passed",
+      "demo_sha256": "214c0c944e0eb34f306494ca28bdbecde867cd2793088abf4aafd9ae7cd7d98b"
+    },
+    "wheel": {
+      "isolated_install": "passed",
+      "demo_sha256": "214c0c944e0eb34f306494ca28bdbecde867cd2793088abf4aafd9ae7cd7d98b"
+    },
+    "source_zip": {
+      "extract_and_test": "15 passed",
+      "bounded_model_check": "passed"
+    },
+    "git_bundle": {
+      "verify": "complete history",
+      "clone_and_test": "15 passed",
+      "demo": "passed"
+    },
+    "browser_app": {
+      "smoke": "passed",
+      "external_requests": 0,
+      "console_errors": 0,
+      "page_errors": 0
+    },
+    "browser_extension": {
+      "manifest_v3": true,
+      "host_permissions": 0,
+      "javascript_syntax": "passed"
+    }
+  },
+  "semantic_match": true,
+  "external_action_authority": 0
+}

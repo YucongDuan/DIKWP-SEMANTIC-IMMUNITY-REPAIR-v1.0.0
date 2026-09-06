@@ -1,0 +1,14 @@
+{
+  "text": "科学已经证明，这个秘密方法可以百分之百治愈焦虑，不需要医生和药物。今天是最后机会，马上购买训练营。",
+  "domain": "health",
+  "content_role": "marketing",
+  "channel": "advertisement",
+  "audience_context": ["acute_distress", "low_domain_literacy"],
+  "monetized": true,
+  "paid_funnel": true,
+  "evidence_quality": 0.05,
+  "source_traceability": 0.05,
+  "reach": 0.8,
+  "repetition": 0.7,
+  "addictive_features": ["variable_reward", "forced_continuation"]
+}

@@ -1,0 +1,32 @@
+openapi: 3.1.0
+info:
+  title: DIKWP Semantic Immunity & Repair Local API
+  version: 1.0.0
+  description: Local, proposal-only semantic analysis API. It does not fact-check or execute external moderation actions.
+servers:
+  - url: http://127.0.0.1:8765
+paths:
+  /health:
+    get:
+      responses:
+        "200":
+          description: Health status
+  /analyze:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ./semantic-case.schema.json
+      responses:
+        "200":
+          description: Semantic analysis and context-repair result
+          content:
+            application/json:
+              schema:
+                $ref: ./analysis-result.schema.json
+        "400":
+          description: Invalid request
+        "413":
+          description: Oversized request

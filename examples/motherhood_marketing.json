@@ -1,0 +1,15 @@
+{
+  "text": "女性要先好好照顾自己才能照顾孩子。真正觉醒的妈妈都应该马上报名这门课程，否则只会继续委屈自己。",
+  "domain": "family_parenting",
+  "content_role": "marketing",
+  "channel": "short_video",
+  "audience_context": ["caregiver_fatigue", "low_domain_literacy", "relationship_conflict"],
+  "monetized": true,
+  "paid_funnel": true,
+  "evidence_quality": 0.15,
+  "source_traceability": 0.10,
+  "reach": 0.70,
+  "repetition": 0.65,
+  "ai_origin": "unknown",
+  "addictive_features": ["autoplay", "infinite_scroll", "aggressive_notifications"]
+}

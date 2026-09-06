@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "DIKWP Semantic Immunity Shield",
+  "version": "1.0.0",
+  "description": "Analyze selected text locally for evidence gaps, manipulation, context truncation and zero-sum framing.",
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

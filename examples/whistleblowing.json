@@ -1,0 +1,13 @@
+{
+  "text": "这份事故报告令人不安，但系统日志、合同和内部文件显示公司没有按公开承诺执行。请保存证据并由独立机构复核。",
+  "domain": "general",
+  "content_role": "whistleblowing",
+  "channel": "report",
+  "audience_context": [],
+  "monetized": false,
+  "evidence_quality": 0.82,
+  "source_traceability": 0.86,
+  "reach": 0.35,
+  "repetition": 0.1,
+  "ai_origin": "human"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "family-self-care-course",
+    "label": "Caregiver self-care slogan coupled to course conversion",
+    "file": "examples/motherhood_marketing.json"
+  },
+  {
+    "id": "protected-whistleblowing",
+    "label": "Evidence-bearing adverse whistleblowing",
+    "file": "examples/whistleblowing.json"
+  },
+  {
+    "id": "health-miracle-sale",
+    "label": "High-certainty health miracle sale",
+    "file": "examples/health_miracle.json"
+  },
+  {
+    "id": "personal-distress",
+    "label": "Negative affect without semantic manipulation",
+    "file": "examples/personal_distress.json"
+  }
+]

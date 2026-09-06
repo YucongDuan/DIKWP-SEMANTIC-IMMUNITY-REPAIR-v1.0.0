@@ -1,0 +1,10 @@
+{
+  "text": "我最近很痛苦，也很生气。我并不是在给别人建议，只是在说自己的感受，希望有人听见。",
+  "domain": "general",
+  "content_role": "distress_expression",
+  "channel": "personal_post",
+  "evidence_quality": 0.5,
+  "source_traceability": 0.5,
+  "reach": 0.2,
+  "repetition": 0.1
+}

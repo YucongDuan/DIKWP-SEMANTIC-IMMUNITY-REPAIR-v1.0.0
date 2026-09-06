@@ -1,0 +1,7 @@
+{
+  "model": "SIRP-1000 bounded reference workflow",
+  "states_checked": 360,
+  "violations": [],
+  "violation_count": 0,
+  "scope": "Finite combinatorial check of protected-expression, appeal, deception and removal invariants."
+}

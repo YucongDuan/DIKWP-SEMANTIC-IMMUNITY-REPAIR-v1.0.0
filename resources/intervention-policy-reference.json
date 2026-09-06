@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "notice": "Reference thresholds only. Deployments must calibrate locally and preserve due process.",
+  "protected_roles": ["criticism", "whistleblowing", "distress_expression"],
+  "high_impact_domains": ["health", "finance", "politics_public_interest"],
+  "decisions": [
+    {"code": "PROTECT_NEGATIVE_TRUTH_OR_DISTRESS", "external_effect": "none", "human_gate": false},
+    {"code": "ALLOW", "external_effect": "none", "human_gate": false},
+    {"code": "ADD_CONTEXT_CARD", "external_effect": "reversible_local_context", "human_gate": false},
+    {"code": "ADD_SHARING_FRICTION", "external_effect": "reversible_user_friction", "human_gate": false},
+    {"code": "REDUCE_RECOMMENDER_AMPLIFICATION_PENDING_REVIEW", "external_effect": "proposal_only", "human_gate": true},
+    {"code": "PAUSE_MONETIZATION_PENDING_REVIEW", "external_effect": "proposal_only", "human_gate": true},
+    {"code": "HUMAN_REVIEW_HIGH_RISK", "external_effect": "none_until_review", "human_gate": true},
+    {"code": "AUTHORIZED_REMOVAL_FOR_ILLEGAL_OR_IMMINENT_HARM", "external_effect": "jurisdiction_connector_required", "human_gate": true},
+    {"code": "CORRECTION_PROPAGATION_AND_RESTITUTION", "external_effect": "jurisdiction_and_contract_required", "human_gate": true}
+  ],
+  "prohibited_features": [
+    "negative_sentiment_as_restriction_feature",
+    "person_moral_score",
+    "cognitive_worth_score",
+    "secret_blacklist",
+    "automatic_external_removal",
+    "viewpoint_penalty",
+    "appeal_retaliation"
+  ]
+}
