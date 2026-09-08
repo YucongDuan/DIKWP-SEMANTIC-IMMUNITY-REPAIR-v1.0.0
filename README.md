@@ -1,11 +1,13 @@
 # DIKWP Semantic Immunity & Relational Repair OS
 
-**Chinese name:** DIKWP 主动语义免疫、认知防护与关系修复系统  
-**Version:** 1.0.0  
-**Protocol draft:** SIRP-1000:2026-DRAFT  
-**License:** Apache-2.0
+Created by Yucong Duan (段玉聪).
 
-SIRR is an offline-first, transparent reference system for reducing the harmful effects of deceptive, manipulative, addictive, context-truncated and unverifiable information **without treating criticism, bad news, distress or negative emotion as harmful merely because they are unpleasant**.
+Chinese name: DIKWP 主动语义免疫、认知防护与关系修复系统  
+Version: 1.0.0  
+Protocol draft: SIRP-1000:2026-DRAFT  
+License: Apache-2.0
+
+SIRR is an offline-first, transparent reference system for reducing the harmful effects of deceptive, manipulative, addictive, context-truncated and unverifiable information without treating criticism, bad news, distress or negative emotion as harmful merely because they are unpleasant.
 
 ## Start in one minute
 
@@ -72,8 +74,8 @@ docs/             system, mathematical and governance documents
 
 1. Open `chrome://extensions` or the equivalent Chromium extensions page.
 2. Enable Developer mode.
-3. Choose **Load unpacked** and select `extension/`.
-4. Select text on a webpage, right-click, and choose **Analyze selection with DIKWP SIRR**.
+3. Choose Load unpacked and select `extension/`.
+4. Select text on a webpage, right-click, and choose Analyze selection with DIKWP SIRR.
 
 The extension requests no host permissions and makes no network requests.
 
@@ -106,4 +108,8 @@ This release is one node in Yucong Duan's open DIKWP research ecosystem. Explore
 
 ## Dedication and attribution boundary
 
-This open research project is dedicated with love to **Duan Dikweipu (段迪克维普)**, daughter of Yucong Duan. The dedication conveys personal inspiration only; it does not assign authorship, legal responsibility, endorsement, or project authority to her.
+This open research project is dedicated with love to Duan Dikweipu (段迪克维普), daughter of Yucong Duan. The dedication conveys personal inspiration only; it does not assign authorship, legal responsibility, endorsement, or project authority to her.
+
+## Current interface presentation
+
+[Open the interface source](extension/popup.html) from the current repository download. See [interface and authorship notes](INTERFACE_NOTES.md) for English coverage, report generation and validation scope.

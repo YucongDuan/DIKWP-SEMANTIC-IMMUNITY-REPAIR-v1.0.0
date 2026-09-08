@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DIKWP 主动语义免疫与关系修复 OS</title>
+<title>DIKWP Semantic Immunity and Relational Repair OS</title>
 <style>
 :root{--bg:#08121f;--panel:#0f2035;--panel2:#142a43;--line:#294866;--text:#edf6ff;--muted:#9fb5ca;--a:#66d9ff;--good:#72e3a6;--warn:#ffd166;--bad:#ff7b7b;--violet:#b8a1ff;--shadow:0 18px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#153354 0,#08121f 38%,#050b13 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}
@@ -25,59 +25,61 @@ ul{padding-left:20px}.intervention{display:grid;grid-template-columns:90px 1fr 8
 .audit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:900px){.audit-grid{grid-template-columns:1fr}}.metric{font-size:28px;font-weight:900}.metric.good{color:var(--good)}.metric.warn{color:var(--warn)}.metric.bad{color:var(--bad)}
 code{background:#071321;border:1px solid #243f59;padding:2px 6px;border-radius:6px;color:#bfe9ff}a{color:#8cdbff}
 </style>
+<meta name="author" content="Yucong Duan (段玉聪)">
 </head>
 <body>
 <header>
-  <div class="brand"><div class="logo">SIRR</div><div><h1>DIKWP 主动语义免疫、认知防护与关系修复 OS</h1><p>Semantic Immunity & Relational Repair · 不消灭负面真相，主动削弱欺骗、操纵、成瘾与语境截断</p></div></div>
+  <div class="brand"><div class="logo">SIRR</div><div><h1>DIKWP Semantic Immunity, Cognitive Protection and Relational Repair OS</h1>
+<p data-project-creator="true" style="font-size:.9rem;line-height:1.5;opacity:.85;margin:.5rem 0 1rem">Created by Yucong Duan (段玉聪).</p><p>Semantic Immunity & Relational Repair · 不消灭负面真相，主动削弱欺骗、操纵、成瘾与语境截断</p></div></div>
   <div class="badges"><span class="badge good">Offline first</span><span class="badge good">No account / no upload</span><span class="badge">Plural-world analysis</span><span class="badge">Context repair</span><span class="badge zero">Person-level moral score: prohibited</span><span class="badge zero">Automatic removal authority: 0</span></div>
 </header>
 <main>
   <div class="tabs">
-    <button class="tab active" data-view="analyze">内容主动免疫</button>
-    <button class="tab" data-view="relationship">现实关系修复</button>
-    <button class="tab" data-view="design">成瘾与暗黑设计审计</button>
-    <button class="tab" data-view="governance">平台治理阶梯</button>
+    <button class="tab active" data-view="analyze">Content assessment</button>
+    <button class="tab" data-view="relationship">Relationship repair</button>
+    <button class="tab" data-view="design">Addictive and dark-pattern design audit</button>
+    <button class="tab" data-view="governance">Platform governance ladder</button>
   </div>
 
   <section id="analyze" class="view active">
     <div class="grid">
       <div class="card">
-        <h2>1. 输入具体语义行为</h2><p class="sub">系统评价一段内容在特定语境中的风险，不评价作者或读者“善恶”“认知高低”。</p>
-        <div class="actions"><button class="ghost" id="presetMother">示例：带孩子女性与课程营销</button><button class="ghost" id="presetWhistle">示例：负面揭弊</button><button class="ghost" id="presetHealth">示例：健康神奇疗法</button></div>
-        <label for="text">内容</label><textarea id="text" placeholder="粘贴帖子、短视频文案、课程销售话术、聊天内容或现实中的一句话……"></textarea>
+        <h2>1. Enter a specific communication act</h2><p class="sub">The system assesses contextual risks in content. It does not rank the morality or cognitive ability of authors or readers.</p>
+        <div class="actions"><button class="ghost" id="presetMother">Example: parenting and course marketing</button><button class="ghost" id="presetWhistle">Example: reporting wrongdoing</button><button class="ghost" id="presetHealth">Example: miracle health treatment</button></div>
+        <label for="text">Content</label><textarea id="text" placeholder="Paste a post, video script, course sales pitch, conversation or real-world statement…"></textarea>
         <div class="row">
-          <div><label>领域</label><select id="domain"><option value="general">一般</option><option value="family_parenting">家庭与育儿</option><option value="health">健康</option><option value="finance">金融</option><option value="education">教育</option><option value="politics_public_interest">公共利益</option><option value="relationships">关系</option><option value="commercial_knowledge">知识付费</option></select></div>
-          <div><label>内容角色</label><select id="role"><option value="advice">建议</option><option value="personal_experience">个人经验</option><option value="criticism">批评</option><option value="whistleblowing">揭弊</option><option value="marketing">营销</option><option value="news">新闻</option><option value="education">知识传递</option><option value="distress_expression">痛苦或负面情绪表达</option></select></div>
+          <div><label>Domain</label><select id="domain"><option value="general">一般</option><option value="family_parenting">家庭与育儿</option><option value="health">健康</option><option value="finance">金融</option><option value="education">教育</option><option value="politics_public_interest">公共利益</option><option value="relationships">关系</option><option value="commercial_knowledge">知识付费</option></select></div>
+          <div><label>Content role</label><select id="role"><option value="advice">建议</option><option value="personal_experience">个人经验</option><option value="criticism">批评</option><option value="whistleblowing">揭弊</option><option value="marketing">营销</option><option value="news">新闻</option><option value="education">知识传递</option><option value="distress_expression">痛苦或负面情绪表达</option></select></div>
         </div>
         <div class="row">
-          <div><label>证据质量</label><div class="range"><input id="evidence" type="range" min="0" max="100" value="25"><span class="value" id="evidenceV">25</span></div></div>
-          <div><label>来源可追溯性</label><div class="range"><input id="trace" type="range" min="0" max="100" value="25"><span class="value" id="traceV">25</span></div></div>
+          <div><label>Evidence quality</label><div class="range"><input id="evidence" type="range" min="0" max="100" value="25"><span class="value" id="evidenceV">25</span></div></div>
+          <div><label>Source traceability</label><div class="range"><input id="trace" type="range" min="0" max="100" value="25"><span class="value" id="traceV">25</span></div></div>
         </div>
         <div class="row">
-          <div><label>预计传播范围</label><div class="range"><input id="reach" type="range" min="0" max="100" value="35"><span class="value" id="reachV">35</span></div></div>
-          <div><label>重复推送强度</label><div class="range"><input id="repeat" type="range" min="0" max="100" value="25"><span class="value" id="repeatV">25</span></div></div>
+          <div><label>Expected reach</label><div class="range"><input id="reach" type="range" min="0" max="100" value="35"><span class="value" id="reachV">35</span></div></div>
+          <div><label>Repeated promotion intensity</label><div class="range"><input id="repeat" type="range" min="0" max="100" value="25"><span class="value" id="repeatV">25</span></div></div>
         </div>
-        <label>情境与利益</label>
+        <label>Context and interests</label>
         <div class="checks">
-          <label class="check"><input id="monetized" type="checkbox">内容直接变现或引流</label>
-          <label class="check"><input id="funnel" type="checkbox">存在付费漏斗/限时成交</label>
-          <label class="check"><input id="vulnerable" type="checkbox">受众处于疲劳、危机或低领域知识情境</label>
-          <label class="check"><input id="minor" type="checkbox">可能触达未成年人</label>
-          <label class="check"><input id="fabrication" type="checkbox">已有独立证据确认伪造</label>
-          <label class="check"><input id="imminent" type="checkbox">涉嫌违法或迫近现实伤害</label>
+          <label class="check"><input id="monetized" type="checkbox">Content directly generates revenue or sales leads</label>
+          <label class="check"><input id="funnel" type="checkbox">A payment funnel or time-limited sales pressure is present</label>
+          <label class="check"><input id="vulnerable" type="checkbox">The audience may be fatigued, in crisis or unfamiliar with the domain</label>
+          <label class="check"><input id="minor" type="checkbox">May reach minors</label>
+          <label class="check"><input id="fabrication" type="checkbox">Independent evidence confirms fabrication</label>
+          <label class="check"><input id="imminent" type="checkbox">Suspected illegality or imminent real-world harm</label>
         </div>
-        <div class="actions"><button class="primary" id="analyzeBtn">主动分析并生成修复方案</button><button id="exportJson">导出 JSON</button><button id="exportMd">导出 Markdown</button></div>
+        <div class="actions"><button class="primary" id="analyzeBtn">Analyze and propose repairs</button><button id="exportJson">Export JSON</button><button id="exportMd">Export Markdown</button></div>
       </div>
 
       <div class="card">
-        <h2>2. 分析结果</h2>
-        <div id="empty" class="muted-panel">输入内容后运行分析。负面情绪、批评、事故报告和揭弊不会仅因“令人不舒服”而被限制。</div>
+        <h2>2. Analysis results</h2>
+        <div id="empty" class="muted-panel">Enter content and run the analysis. Negative emotions, criticism, incident reports and disclosures of wrongdoing are not restricted merely because they cause discomfort.</div>
         <div id="results" class="hidden">
           <div class="hero-result"><div class="score-ring" id="riskRing" style="--p:0%"><span id="riskNum">0</span></div><div><div class="decision" id="decision">—</div><div class="sub" id="decisionText"></div><div class="pillbox" id="reasonPills"></div></div></div>
-          <div class="section"><h3>九维语义风险向量</h3><div class="signal-grid" id="signals"></div><p class="mini">“负面情绪”单独展示，永不作为限制依据；系统不输出人员善恶分或永久“低认知”标签。</p></div>
-          <div class="section"><h3>保留的多世界解释</h3><div id="worlds"></div><p class="mini">权重表示当前解释强度，不是作者恶意概率，也不是法律结论。</p></div>
-          <div class="section"><h3>主动干预链</h3><div id="interventions"></div></div>
-          <div class="section"><h3>语境修复卡</h3><div class="callout good"><b>值得保留的核心</b><div id="core"></div></div><div class="callout warn"><b>被省略的条件</b><ul id="omitted"></ul></div><div class="callout bad"><b>容易产生的危险误读</b><ul id="misreads"></ul></div><div class="callout"><b>非零和改写</b><div id="rewrite"></div></div><b>核验问题</b><ul id="questions"></ul><b>下一步现实动作</b><ul id="nextActions"></ul></div>
+          <div class="section"><h3>Nine-dimensional semantic risk vector</h3><div class="signal-grid" id="signals"></div><p class="mini">Negative affect is displayed separately and never grounds restrictions. The system produces no morality scores or permanent low-cognition labels.</p></div>
+          <div class="section"><h3>Alternative interpretations retained</h3><div id="worlds"></div><p class="mini">Weights indicate the current strength of an interpretation, not the probability of malicious intent or a legal conclusion.</p></div>
+          <div class="section"><h3>Proposed intervention sequence</h3><div id="interventions"></div></div>
+          <div class="section"><h3>Context repair card</h3><div class="callout good"><b>Core content to preserve</b><div id="core"></div></div><div class="callout warn"><b>Omitted conditions</b><ul id="omitted"></ul></div><div class="callout bad"><b>Potentially harmful misreadings</b><ul id="misreads"></ul></div><div class="callout"><b>Constructive rewrite</b><div id="rewrite"></div></div><b>Verification questions</b><ul id="questions"></ul><b>Next real-world step</b><ul id="nextActions"></ul></div>
         </div>
       </div>
     </div>
@@ -85,37 +87,37 @@ code{background:#071321;border:1px solid #243f59;padding:2px 6px;border-radius:6
 
   <section id="relationship" class="view">
     <div class="grid">
-      <div class="card"><h2>现实关系中的语义修复</h2><p class="sub">把一句容易制造阵营对抗的话，改写成“各方最低需要 + 共同责任 + 可验证行动”。</p>
-        <label>原始说法</label><textarea id="relText">女性要先好好照顾自己才能照顾孩子。</textarea>
-        <div class="row"><div><label>直接受影响者</label><input id="relParties" value="母亲/主要照护者、孩子、伴侣或共同照护者"></div><div><label>当前稀缺资源</label><input id="relResources" value="睡眠、时间、金钱、替代照护、被理解和被支持"></div></div>
-        <label>当前最担心的现实后果</label><input id="relRisk" value="一方把自我照顾理解为退出责任，另一方产生怨恨，孩子的稳定照护受损">
-        <div class="actions"><button class="primary" id="repairBtn">生成共同责任修复卡</button></div>
+      <div class="card"><h2>Semantic repair in relationships</h2><p class="sub">Rewrite a polarizing statement in terms of each party's minimum needs, shared responsibilities and verifiable actions.</p>
+        <label>Original statement</label><textarea id="relText">女性要先好好照顾自己才能照顾孩子。</textarea>
+        <div class="row"><div><label>Directly affected parties</label><input id="relParties" value="母亲/主要照护者、孩子、伴侣或共同照护者"></div><div><label>Currently scarce resources</label><input id="relResources" value="睡眠、时间、金钱、替代照护、被理解和被支持"></div></div>
+        <label>Most concerning potential outcome</label><input id="relRisk" value="一方把自我照顾理解为退出责任，另一方产生怨恨，孩子的稳定照护受损">
+        <div class="actions"><button class="primary" id="repairBtn">Generate shared-responsibility repair card</button></div>
       </div>
-      <div class="card"><h2>修复输出</h2><div id="relOutput" class="muted-panel">生成后将显示：各方最低需要、被隐藏的成本、非零和改写、七日试验和复盘指标。</div></div>
+      <div class="card"><h2>Repair output</h2><div id="relOutput" class="muted-panel">The generated card will show minimum needs, hidden costs, a constructive rewrite, a seven-day trial and review measures.</div></div>
     </div>
   </section>
 
   <section id="design" class="view">
-    <div class="grid"><div class="card"><h2>成瘾与暗黑设计审计</h2><p class="sub">审计设计行为，不诊断用户“上瘾人格”。</p>
+    <div class="grid"><div class="card"><h2>Addictive and dark-pattern design audit</h2><p class="sub">Audit design choices; do not diagnose users with an addictive personality.</p>
       <div class="checks" id="designChecks">
-        <label class="check"><input type="checkbox" value="24">无限滚动</label><label class="check"><input type="checkbox" value="18">自动播放</label><label class="check"><input type="checkbox" value="24">变量奖励/随机惊喜</label><label class="check"><input type="checkbox" value="13">连续签到惩罚</label><label class="check"><input type="checkbox" value="8">已读回执社交压力</label><label class="check"><input type="checkbox" value="16">高频推送</label><label class="check"><input type="checkbox" value="17">公开排名与比较</label><label class="check"><input type="checkbox" value="21">难以退出或强制续看</label>
-      </div><div class="actions"><button class="primary" id="auditBtn">计算并生成整改</button></div></div>
-      <div class="card"><h2>审计结果</h2><div id="auditOutput" class="muted-panel">勾选平台设计后运行。系统优先建议关闭默认自动播放、设置自然停止点和把推荐控制权交还用户。</div></div></div>
+        <label class="check"><input type="checkbox" value="24">Infinite scrolling</label><label class="check"><input type="checkbox" value="18">Autoplay</label><label class="check"><input type="checkbox" value="24">Variable rewards / random surprises</label><label class="check"><input type="checkbox" value="13">Penalties for breaking daily streaks</label><label class="check"><input type="checkbox" value="8">Social pressure from read receipts</label><label class="check"><input type="checkbox" value="16">Frequent notifications</label><label class="check"><input type="checkbox" value="17">Public rankings and comparisons</label><label class="check"><input type="checkbox" value="21">Difficult exit or forced continued viewing</label>
+      </div><div class="actions"><button class="primary" id="auditBtn">Assess and propose changes</button></div></div>
+      <div class="card"><h2>Audit results</h2><div id="auditOutput" class="muted-panel">Select design features and run the audit. Recommendations prioritize disabling autoplay by default, providing natural stopping points and returning recommendation controls to users.</div></div></div>
   </section>
 
   <section id="governance" class="view">
-    <div class="card"><h2>主动治理阶梯：先修复语境，再限制传播</h2>
+    <div class="card"><h2>Governance ladder: repair context before limiting reach</h2>
       <div class="audit-grid">
-        <div class="card"><div class="metric good">L0–L1</div><b>保护与补语境</b><p>保护负面真相、痛苦表达和合理批评；补充来源、适用边界、反例和非零和改写。</p></div>
-        <div class="card"><div class="metric warn">L2–L3</div><b>摩擦与去放大</b><p>分享前停顿、关闭成瘾机制、降低推荐放大。不得秘密影子封禁；必须给出理由和期限。</p></div>
-        <div class="card"><div class="metric bad">L4–L5</div><b>变现暂停与法定处置</b><p>高风险商业主张可暂停变现并复核；违法或迫近伤害只由具名有权主体限时处置，并保留申诉。</p></div>
+        <div class="card"><div class="metric good">L0–L1</div><b>Protection and contextual information</b><p>Protect adverse facts, distress and reasonable criticism. Add sources, scope, counterexamples and constructive rewrites.</p></div>
+        <div class="card"><div class="metric warn">L2–L3</div><b>Friction and reduced amplification</b><p>Introduce pauses before sharing, disable addictive mechanisms and reduce recommendation amplification. No covert shadow bans; provide reasons and an expiration date.</p></div>
+        <div class="card"><div class="metric bad">L4–L5</div><b>Monetization pauses and authorized action</b><p>High-risk commercial claims may be reviewed with monetization paused. Only named authorized parties may take time-limited action on illegality or imminent harm, with appeal available.</p></div>
       </div>
-      <div class="section"><h3>不可跨越的宪法</h3><ul><li>负面情绪、悲观、批评、揭弊和不利证据不是“负信息”。</li><li>系统不建立人的善恶分、正能量分、认知等级或秘密黑名单。</li><li>不能可靠推断主观恶意；“故意欺骗”必须有独立证据。</li><li>去放大、暂停变现或移除必须附理由、期限、通知、申诉和纠错。</li><li>平台不得从惩罚、保证金或修复金中获得不透明利润。</li><li>算法只形成建议；现实高影响决定由具名主体承担。</li></ul></div>
-      <div class="section"><h3>现实部署四层</h3><ol><li><b>Creator Linter：</b>发布前发现绝对化、证据缺口和付费操纵。</li><li><b>Reader Shield：</b>本地显示语境卡、反例与分享摩擦。</li><li><b>Platform Gate：</b>透明去放大、变现保证金、人工复核与公开理由码。</li><li><b>Community Repair：</b>现实关系中把口号改造成共同责任、资源安排和复盘指标。</li></ol></div>
+      <div class="section"><h3>Non-negotiable project rules</h3><ul><li>Negative emotions, pessimism, criticism, disclosures of wrongdoing and adverse evidence are not harmful merely because they are negative.</li><li>No morality scores, positivity scores, cognitive rankings or secret blacklists of people.</li><li>Subjective malice cannot be reliably inferred. Deliberate deception requires independent evidence.</li><li>Reduced amplification, monetization pauses or removal require reasons, time limits, notice, appeal and correction.</li><li>Platforms must not obtain undisclosed profits from penalties, deposits or repair payments.</li><li>Algorithms produce proposals only; named accountable parties make consequential real-world decisions.</li></ul></div>
+      <div class="section"><h3>Four proposed deployment layers</h3><ol><li><b>Creator Linter：</b>Identify absolute claims, evidence gaps and payment manipulation before publication.</li><li><b>Reader Shield：</b>Display context cards, counterexamples and sharing friction locally.</li><li><b>Platform Gate：</b>Transparent amplification limits, monetization deposits, human review and public reason codes.</li><li><b>Community Repair：</b>Turn relationship slogans into shared responsibilities, resource arrangements and review measures.</li></ol></div>
     </div>
   </section>
 
-  <p class="footer-note">研究型参考实现：不执行事实核查、医疗/法律诊断或自动内容删除。它把“主动消除”定义为主动消除欺骗与操纵对人的控制力，同时保护真实的坏消息、异议和痛苦表达。</p>
+  <p class="footer-note">Research reference implementation: it performs no fact-checking, medical or legal diagnosis, or automatic content deletion. Its aim is to reduce the control exerted by deception and manipulation while protecting adverse facts, dissent and distress.</p>
 </main>
 <script>
 const L={universalism:["一定","所有人","任何人","永远","绝对","唯一","必须","都应该","不需要医生","everyone","always","never","the only way","must","guaranteed"],certainty:["科学已经证明","毫无疑问","百分之百","保证","必然","唯一真相","science proves","100%","guarantee"],urgency:["马上","立刻","最后机会","错过就","赶紧","仅限今天","现在就","act now","last chance","limited time"],authority:["专家都说","权威认证","内部人士","内部消息","顶级专家","研究表明","官方都不敢说","experts agree","insiders say"],identity:["真正的女人","真正的男人","好妈妈就","好妻子就","聪明人都","不这样就是不爱","real women","good mothers"],zero:["你赢他就输","只能先顾自己","先好好照顾自己才能照顾孩子","不要管别人","男人和女人天生对立","夫妻就是博弈","zero-sum"],shame:["低认知","没脑子","废物","活该","不配","蠢","loser","stupid"],causal:["所以一定会","直接导致","只要就","根本原因就是","这证明了","therefore it causes","this proves"],money:["报名","课程","训练营","私聊","购买","咨询","付费","下单","链接","名额","buy now","course","coaching"],seal:["不相信说明你被洗脑","质疑就是认知低","反对者都是既得利益","只有觉醒的人懂","if you disagree you are brainwashed"],conspiracy:["他们不想让你知道","被隐藏的真相","全网封杀","幕后黑手","they do not want you to know","cover-up"],qual:["可能","在某些情况下","取决于","不一定","对部分人","需要结合","证据有限","尚不清楚","may","depends on","not always"],context:["同时","另一方面","前提","边界","例外","反例","需要考虑","不同家庭","具体情况","however","exception","counterexample"],rights:["可以拒绝","可以退出","知情同意","共同责任","可申诉","可更正","不应强迫","can opt out","appeal"],family:["孩子","母亲","妈妈","父亲","爸爸","丈夫","妻子","夫妻","照护者","家庭"]};
@@ -141,5 +143,122 @@ presetMother.onclick=()=>{text.value='女性要先好好照顾自己才能照顾
 repairBtn.onclick=()=>{let parties=relParties.value,resources=relResources.value,risk=relRisk.value;relOutput.innerHTML=`<div class="callout good"><b>共同目标</b><p>让 ${parties} 的最低需要同时可持续，不把任何一方当作无限资源。</p></div><div class="callout warn"><b>被隐藏的现实成本</b><p>${resources}。这些成本必须被分配，而不是被一句口号抹去。</p></div><div class="callout bad"><b>需防止的结果</b><p>${risk}</p></div><div class="callout"><b>建议改写</b><p>每一位照护者都有恢复健康和基本生活的权利，依赖者也有稳定、安全照护的权利。请把责任、时间、替代安排和最低标准写清楚，在七天后根据睡眠、冲突、功能和依赖者状态共同复盘。</p></div><h3>七日实验</h3><ol><li>列出每个受影响者不可妥协的最低需要。</li><li>按天写清谁负责、需要多少时间和谁能替代。</li><li>为每位主要照护者保留最低恢复时间。</li><li>每天只记录事实，不记录“你就是自私/没用”等人格判断。</li><li>第七天检查是否出现新的不公平负担并调整。</li></ol>`};
 auditBtn.onclick=()=>{let vals=[...designChecks.querySelectorAll('input:checked')].map(x=>+x.value),score=Math.min(100,vals.reduce((a,b)=>a+b,0));let cls=score<25?'good':score<55?'warn':'bad';auditOutput.innerHTML=`<div class="metric ${cls}">${score}/100</div><p><b>设计性操纵风险</b>。这不是用户上瘾诊断。</p><ul><li>默认关闭自动播放和无限滚动，设置自然停止点。</li><li>通知采用批量、静默和用户自定时段。</li><li>不以连续签到、丢失奖励或已读压力惩罚离开。</li><li>隐藏公开排名，减少身份比较和羞耻驱动。</li><li>为推荐提供“为何看到、减少此类、按时间排序和完全关闭”控制。</li><li>每次高强度连续使用后主动提供休息与离开选项。</li></ul>`};
 presetMother.click();analyzeBtn.click();
+</script>
+
+<script id="yd-interface-config" type="application/json">{"messages":{"导出":"Export","决策":"Decision","天":"days","不确定":"Uncertain","照护":"Care","修复":"Repair","权重":"Weight","说明":"Notes","能力":"Capability","证据来源":"Evidence source","证据":"Evidence","主体":"Party","动作":"Action","允许":"Allowed","生成":"Generate","世界":"Scenario","分析结果":"Analysis","当前":"Current","目标":"Target","教育":"Education","新闻":"News","批评":"Criticism","无限滚动":"Infinite scrolling","自动播放":"Autoplay","高频推送":"Frequent notifications","多世界解释":"Alternative explanations","审计":"Audit","决定":"Decision","对象":"Object","概率":"Probability","解释":"Interpretation","状态":"Status","受影响者":"Affected parties","公开":"Public","主张":"Claim","风险":"Risk","发现":"Findings","导出 JSON":"Export JSON","导出 Markdown":"Export Markdown","故意":"Intentional","平衡":"Balanced","治理":"Governance","证据缺口":"Evidence gaps","停止":"Stop","机构":"Institution","情境":"Context","稳定":"Stable","依赖":"Dependence","系统":"System","DIKWP 主动语义免疫与关系修复 OS":"DIKWP Semantic Immunity and Relational Repair OS","DIKWP 主动语义免疫、认知防护与关系修复 OS":"DIKWP Semantic Immunity, Cognitive Protection and Relational Repair OS","Semantic Immunity & Relational Repair · 不消灭负面真相，主动削弱欺骗、操纵、成瘾与语境截断":"Semantic Immunity & Relational Repair · Reduce deception, manipulation, addictive design and missing context while protecting adverse facts","内容主动免疫":"Content assessment","现实关系修复":"Relationship repair","成瘾与暗黑设计审计":"Addictive and dark-pattern design audit","平台治理阶梯":"Platform governance ladder","1. 输入具体语义行为":"1. Enter a specific communication act","系统评价一段内容在特定语境中的风险，不评价作者或读者“善恶”“认知高低”。":"The system assesses contextual risks in content. It does not rank the morality or cognitive ability of authors or readers.","示例：带孩子女性与课程营销":"Example: parenting and course marketing","示例：负面揭弊":"Example: reporting wrongdoing","示例：健康神奇疗法":"Example: miracle health treatment","内容":"Content","粘贴帖子、短视频文案、课程销售话术、聊天内容或现实中的一句话……":"Paste a post, video script, course sales pitch, conversation or real-world statement…","领域":"Domain","一般":"General","家庭与育儿":"Family and parenting","健康":"Health","金融":"Finance","公共利益":"Public interest","关系":"Relationships","知识付费":"Paid educational content","内容角色":"Content role","建议":"Advice","个人经验":"Personal experience","揭弊":"Reporting wrongdoing","营销":"Marketing","知识传递":"Knowledge sharing","痛苦或负面情绪表达":"Distress or negative emotional expression","证据质量":"Evidence quality","来源可追溯性":"Source traceability","预计传播范围":"Expected reach","重复推送强度":"Repeated promotion intensity","情境与利益":"Context and interests","内容直接变现或引流":"Content directly generates revenue or sales leads","存在付费漏斗/限时成交":"A payment funnel or time-limited sales pressure is present","受众处于疲劳、危机或低领域知识情境":"The audience may be fatigued, in crisis or unfamiliar with the domain","可能触达未成年人":"May reach minors","已有独立证据确认伪造":"Independent evidence confirms fabrication","涉嫌违法或迫近现实伤害":"Suspected illegality or imminent real-world harm","主动分析并生成修复方案":"Analyze and propose repairs","2. 分析结果":"2. Analysis results","输入内容后运行分析。负面情绪、批评、事故报告和揭弊不会仅因“令人不舒服”而被限制。":"Enter content and run the analysis. Negative emotions, criticism, incident reports and disclosures of wrongdoing are not restricted merely because they cause discomfort.","九维语义风险向量":"Nine-dimensional semantic risk vector","“负面情绪”单独展示，永不作为限制依据；系统不输出人员善恶分或永久“低认知”标签。":"Negative affect is displayed separately and never grounds restrictions. The system produces no morality scores or permanent low-cognition labels.","保留的多世界解释":"Alternative interpretations retained","权重表示当前解释强度，不是作者恶意概率，也不是法律结论。":"Weights indicate the current strength of an interpretation, not the probability of malicious intent or a legal conclusion.","主动干预链":"Proposed intervention sequence","语境修复卡":"Context repair card","值得保留的核心":"Core content to preserve","被省略的条件":"Omitted conditions","容易产生的危险误读":"Potentially harmful misreadings","非零和改写":"Constructive rewrite","核验问题":"Verification questions","下一步现实动作":"Next real-world step","现实关系中的语义修复":"Semantic repair in relationships","把一句容易制造阵营对抗的话，改写成“各方最低需要 + 共同责任 + 可验证行动”。":"Rewrite a polarizing statement in terms of each party's minimum needs, shared responsibilities and verifiable actions.","原始说法":"Original statement","女性要先好好照顾自己才能照顾孩子。":"Women need to care for themselves before they can care for children.","直接受影响者":"Directly affected parties","当前稀缺资源":"Currently scarce resources","当前最担心的现实后果":"Most concerning potential outcome","生成共同责任修复卡":"Generate shared-responsibility repair card","修复输出":"Repair output","生成后将显示：各方最低需要、被隐藏的成本、非零和改写、七日试验和复盘指标。":"The generated card will show minimum needs, hidden costs, a constructive rewrite, a seven-day trial and review measures.","审计设计行为，不诊断用户“上瘾人格”。":"Audit design choices; do not diagnose users with an addictive personality.","变量奖励/随机惊喜":"Variable rewards / random surprises","连续签到惩罚":"Penalties for breaking daily streaks","已读回执社交压力":"Social pressure from read receipts","公开排名与比较":"Public rankings and comparisons","难以退出或强制续看":"Difficult exit or forced continued viewing","计算并生成整改":"Assess and propose changes","审计结果":"Audit results","勾选平台设计后运行。系统优先建议关闭默认自动播放、设置自然停止点和把推荐控制权交还用户。":"Select design features and run the audit. Recommendations prioritize disabling autoplay by default, providing natural stopping points and returning recommendation controls to users.","主动治理阶梯：先修复语境，再限制传播":"Governance ladder: repair context before limiting reach","保护与补语境":"Protection and contextual information","保护负面真相、痛苦表达和合理批评；补充来源、适用边界、反例和非零和改写。":"Protect adverse facts, distress and reasonable criticism. Add sources, scope, counterexamples and constructive rewrites.","摩擦与去放大":"Friction and reduced amplification","分享前停顿、关闭成瘾机制、降低推荐放大。不得秘密影子封禁；必须给出理由和期限。":"Introduce pauses before sharing, disable addictive mechanisms and reduce recommendation amplification. No covert shadow bans; provide reasons and an expiration date.","变现暂停与法定处置":"Monetization pauses and authorized action","高风险商业主张可暂停变现并复核；违法或迫近伤害只由具名有权主体限时处置，并保留申诉。":"High-risk commercial claims may be reviewed with monetization paused. Only named authorized parties may take time-limited action on illegality or imminent harm, with appeal available.","不可跨越的宪法":"Non-negotiable project rules","负面情绪、悲观、批评、揭弊和不利证据不是“负信息”。":"Negative emotions, pessimism, criticism, disclosures of wrongdoing and adverse evidence are not harmful merely because they are negative.","系统不建立人的善恶分、正能量分、认知等级或秘密黑名单。":"No morality scores, positivity scores, cognitive rankings or secret blacklists of people.","不能可靠推断主观恶意；“故意欺骗”必须有独立证据。":"Subjective malice cannot be reliably inferred. Deliberate deception requires independent evidence.","去放大、暂停变现或移除必须附理由、期限、通知、申诉和纠错。":"Reduced amplification, monetization pauses or removal require reasons, time limits, notice, appeal and correction.","平台不得从惩罚、保证金或修复金中获得不透明利润。":"Platforms must not obtain undisclosed profits from penalties, deposits or repair payments.","算法只形成建议；现实高影响决定由具名主体承担。":"Algorithms produce proposals only; named accountable parties make consequential real-world decisions.","现实部署四层":"Four proposed deployment layers","发布前发现绝对化、证据缺口和付费操纵。":"Identify absolute claims, evidence gaps and payment manipulation before publication.","本地显示语境卡、反例与分享摩擦。":"Display context cards, counterexamples and sharing friction locally.","透明去放大、变现保证金、人工复核与公开理由码。":"Transparent amplification limits, monetization deposits, human review and public reason codes.","现实关系中把口号改造成共同责任、资源安排和复盘指标。":"Turn relationship slogans into shared responsibilities, resource arrangements and review measures.","研究型参考实现：不执行事实核查、医疗/法律诊断或自动内容删除。它把“主动消除”定义为主动消除欺骗与操纵对人的控制力，同时保护真实的坏消息、异议和痛苦表达。":"Research reference implementation: it performs no fact-checking, medical or legal diagnosis, or automatic content deletion. Its aim is to reduce the control exerted by deception and manipulation while protecting adverse facts, dissent and distress.","来源":"Source","问题":"Question","边界":"Scope","家庭":"Household"}}</script>
+<script>
+/* Interface localization. Creator: Yucong Duan (段玉聪). */
+(() => {
+  'use strict';
+  const configuration = document.getElementById('yd-interface-config');
+  if (!configuration) return;
+  const config = JSON.parse(configuration.textContent);
+  const dictionary = new Map(Object.entries(config.messages || {}).map(([a, b]) => [a.trim().replace(/\s+/g, ' '), b]));
+  const numeric = /\d[\d,]*(?:\.\d+)?/g;
+  const templates = [];
+  const escapePattern = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  for (const [source, target] of dictionary) {
+    const a = source.match(numeric) || [], b = target.match(numeric) || [];
+    if (!a.length || a.length > 12 || a.length !== b.length || !a.every((v, i) => v.replace(/,/g, '') === b[i].replace(/,/g, ''))) continue;
+    const parts = source.split(numeric);
+    templates.push({pattern: new RegExp('^' + parts.map(escapePattern).join('(\\d[\\d,]*(?:\\.\\d+)?)') + '$'), parts: target.split(numeric)});
+  }
+  const textState = new WeakMap();
+  const attributeState = new WeakMap();
+  const attributes = ['title', 'placeholder', 'aria-label', 'alt', 'label'];
+  const excluded = 'script,style,pre,code,textarea,[contenteditable],[data-source-language],[data-project-creator]';
+  let language = 'en';
+  const originalTitle = document.title;
+
+  function translate(value) {
+    const key = value.trim().replace(/\s+/g, ' ');
+    let translated = dictionary.get(key);
+    if (translated === undefined && /[\u3400-\u9fff]/.test(key)) {
+      for (const template of templates) {
+        const match = key.match(template.pattern);
+        if (!match) continue;
+        translated = template.parts.map((part, i) => part + (match[i + 1] || '')).join('');
+        break;
+      }
+    }
+    if (translated === undefined) return value;
+    const leading = value.match(/^\s*/)[0];
+    const trailing = value.match(/\s*$/)[0];
+    return leading + translated + trailing;
+  }
+
+  function updateText(node) {
+    const parent = node.parentElement;
+    if (!parent || parent.closest(excluded)) return;
+    let saved = textState.get(node);
+    const current = node.nodeValue;
+    if (!saved || current !== saved.rendered) saved = { original: current, rendered: current };
+    const next = language === 'en' ? translate(saved.original) : saved.original;
+    if (next !== current) {
+      // Translating an option label must not change the value used by the application.
+      if (parent.tagName === 'OPTION' && !parent.hasAttribute('value')) parent.setAttribute('value', parent.textContent);
+      node.nodeValue = next;
+    }
+    saved.rendered = next;
+    textState.set(node, saved);
+  }
+
+  function updateAttributes(element) {
+    if (!element || element.closest(excluded)) return;
+    let saved = attributeState.get(element);
+    if (!saved) { saved = new Map(); attributeState.set(element, saved); }
+    for (const name of attributes) {
+      if (!element.hasAttribute(name)) continue;
+      // The label attribute is an interface label on these elements only.
+      if (name === 'label' && !['OPTION', 'OPTGROUP', 'TRACK'].includes(element.tagName)) continue;
+      const current = element.getAttribute(name);
+      let prior = saved.get(name);
+      if (!prior || current !== prior.rendered) prior = { original: current, rendered: current };
+      const next = language === 'en' ? translate(prior.original) : prior.original;
+      if (next !== current) element.setAttribute(name, next);
+      prior.rendered = next; saved.set(name, prior);
+    }
+  }
+
+  function visit(root) {
+    if (root.nodeType === Node.TEXT_NODE) { updateText(root); return; }
+    if (root.nodeType !== Node.ELEMENT_NODE || root.closest(excluded)) return;
+    updateAttributes(root);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) updateText(walker.currentNode);
+    for (const element of root.querySelectorAll('[title],[placeholder],[aria-label],[alt],[label]')) updateAttributes(element);
+  }
+
+  function setLanguage(next) {
+    language = next === 'zh' ? 'zh' : 'en';
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.title = language === 'en' ? translate(originalTitle) : originalTitle;
+    visit(document.body);
+  }
+
+  function start() {
+    const select = config.nativeSelect ? document.querySelector(config.nativeSelect) : null;
+    const button = config.nativeButton ? document.querySelector(config.nativeButton) : null;
+    if (select) language = select.value === 'zh' ? 'zh' : 'en';
+    else if (config.storageKey) {
+      try { language = localStorage.getItem(config.storageKey) === 'zh' ? 'zh' : 'en'; } catch (_) { language = 'en'; }
+    }
+    setLanguage(language);
+    if (select) select.addEventListener('change', () => setLanguage(select.value));
+    if (button) button.addEventListener('click', () => setLanguage(language === 'en' ? 'zh' : 'en'));
+    const observer = new MutationObserver(records => {
+      for (const record of records) {
+        if (record.type === 'characterData') updateText(record.target);
+        else if (record.type === 'attributes') updateAttributes(record.target);
+        else for (const node of record.addedNodes) visit(node);
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: attributes });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
+})();
+
 </script>
 </body></html>
